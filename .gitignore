@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+
+/C++Project/.vs/
+/C++Project/Debug/
+/C++Project/x64/
