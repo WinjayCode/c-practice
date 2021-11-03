@@ -43,7 +43,7 @@ int getValue(int x, int y) {
 * C++的main函数通常有两种写法，一种是参数留空，一种是定义参数数量以及参数值。
 * int main() {}
 * int main(int argc, char* argv[]) {}
-*/ 
+*/
 int main() {
 	// 命名空间是C++当中的特性，用来解决大型项目名称冲突的问题。
 	/*
@@ -97,13 +97,13 @@ int main() {
 	* class UrlTable { ...
 	* class UrlTableTester { ...
 	* struct UrlTableProperties { ...
-	* 
+	*
 	* 类型定义：
 	* typedef hash_map<UrlTableProperties *, string> PropertiesMap;
-	* 
+	*
 	* using 别名
 	* using PropertiesMap = hash_map<UrlTableProperties *, string>;
-	* 
+	*
 	* 枚举
 	* enum UrlTableErrors { ...
 	*/
@@ -114,7 +114,7 @@ int main() {
 	* string table_name;  // 好 - 用下划线.
 	* string tablename;   // 好 - 全小写.
 	* string tableName;  // 差 - 混合大小写
-	* 
+	*
 	* 但如果是类中的数据成员（成员变量），则变量的末尾需要额外的下划线：
 	* class TableInfo {
 	*	 ...
@@ -123,7 +123,7 @@ int main() {
 	*	 string tablename_;   // 好.
 	*	 static Pool<TableInfo>* pool_;  // 好.
 	* };
-	* 
+	*
 	* 但结构体除外，仍然和普通变量一样命名。
 	* struct UrlTableProperties {
 	*	string name;
@@ -270,17 +270,17 @@ int main() {
 * 关于cin与stdin同步带来的开销，我们是有办法解决的，只需要在加上这一行代码：
 *	std::ios::sync_with_stdio(false);
 * 这行代码的意思是取消cin、cout与stdin、stdout的指针同步，会使得cin、cout的性能大大提升，达到和scanf、printf相差无几的程度。当然，更好的方法是使用scanf、printf代替。
-* 
+*
 * 而要使用scanf和printf又有一个问题，它们是C语言的标准输入输出方式，需要提供标识符来代表变量的类型，
 * long long的标识符是lld，所以我们使用scanf读入一个long long类型的数写成：
 *	long long a;
 *	scanf("%lld", &a);
-* 
+*
 * __int64的标识符是I64d，注意这里是大写的i，不是l
 *	__int64 a;
 *	scanf("%I64d", &a);
-* 
-* 
+*
+*
 * 变量定义	输出方式	gcc(mingw32)	g++(mingw32)	gcc(linux i386)	g++(linux i386)	MicrosoftVisual C++ 6.0
 * long long	“%lld”	  错误				错误			正确			正确			无法编译
 * long long	“%I64d”	  正确				正确			错误			错误			无法编译
