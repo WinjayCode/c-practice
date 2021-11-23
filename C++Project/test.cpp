@@ -246,6 +246,74 @@ void str_p() {
 	cout << "name=" << name << endl;
 }
 
+
+void cstring_h_p();
+// 字符串函数
+void cstring_h_p() {
+	char str1[100]="hello world";
+	char str2[100]="contact test";
+
+	cout << "hello world" << endl;
+	cout << "contact test" << endl;
+
+	// 长度
+	cout << "strlen=" << strlen(str1) << endl;
+
+	// 拼接
+	strcat_s(str1, str2);
+	cout << "strcat=" << str1 << endl;
+
+	// 有限拼接
+	strncat_s(str1, str2, 4);
+	cout << "strncat=" << str1 << endl;
+
+	// 字符串拷贝
+	strcpy_s(str1, str2);
+	cout << "strcpy=" << str1 << endl;
+
+	// 字符串有限拷贝
+	strncpy_s(str1, str2, 4);
+	cout << "strncpy=" << str1 << endl;
+
+	// 字符串设置
+	memset(str1, 'a', 100);
+	cout << "memset=" << str1 << endl;
+
+	int a[100];
+	memset(a, 1, sizeof a);
+	cout << "memset(int[] <- 1)=" << a << endl;
+
+	memset(a, 0, sizeof a);
+	cout << "memset(int[] <- 0)=" << a << endl;
+
+	memset(a, -1, sizeof a);
+	cout << "memset(int[] <- -1)=" << a << endl;
+
+	memset(a, 0x7f, sizeof a);
+	cout << "memset(int[] <- 0x7f)=" << a << endl;
+
+	memset(a, 0x3f, sizeof a);
+	cout << "memset(int[] <- 0x3f)=" << a << endl;
+
+	// 字符串拷贝
+	memcpy(str1, str2, 4);
+	cout << "memcpy=" << str1 << endl;
+
+	// 字符串比较
+	char str3[100] = "abcd";
+	char str4[100] = "abcd";
+	int result = strcmp(str3, str4);
+	int result2 = strncmp(str3, str4, 3);
+	cout << "strcmp('abcd', 'abcd') = " << result << endl; // 0
+	cout << "strncmp('abcd', 'abcd', 3) = " << result2 << endl; // 0
+
+	// 字符位置查找
+	char str5[100] = "abcd-efgh";
+	char str6[100] = "-";
+	char *result3 = strstr(str5, str6);
+	cout << "strstr('abcd-efgh', '-') = " << result3 << endl; // -efgh
+}
+
 // main函数是C++程序的入口函数，C++标准当中定义的main函数类型是int。返回0表示程序正常退出，所以一般我们要在main函数的最后写上return 0。
 /*
 * C++的main函数通常有两种写法，一种是参数留空，一种是定义参数数量以及参数值。
@@ -264,6 +332,7 @@ int main() {
 	cout << ++index << ".float" << endl;
 	cout << ++index << ".calculate" << endl;
 	cout << ++index << ".str" << endl;
+	cout << ++index << ".cstring.h" << endl;
 	cout << endl;
 
 	cout << "num=" << endl << endl;
@@ -310,6 +379,10 @@ int main() {
 
 	if (num == 10) {
 		str_p();
+	}
+
+	if (num == 11) {
+		cstring_h_p();
 	}
 
 	return 0;
@@ -782,4 +855,70 @@ int main() {
 *	cin.getline(name, 100);
 *	cout << "a = " << a << endl;
 *	cout << "name = " << name << endl;
+*/
+
+
+
+//字符串函数
+/*
+* cstring.h库即C语言中的string.h库，它是C语言中为字符串提供的标准库。C++对此进行了兼容，所以我们在C++当中一样可以使用。
+* 
+* strlen
+* 由于编译器是按照\0的位置来确定字符串的结尾的，所以字符串的长度并不等于数组的长度。我们可以使用strlen函数求得字符串的真实长度
+* 
+* strcat
+* strcat函数可以将两个字符串进行拼接，它的函数签名为：
+*	char *strcat(char *dest, const char *src)
+* 我们可以看到它接受两个参数，一个是dest，一个是src，都是char*类型，返回的结果也为char *类型。在C++当中，数组名是指向数组中第一个元素的常量指针。所以虽然签名中写的参数是指针类型，但我们传入数组名同样可以。
+* 我们传入两个字符串之后，strcat函数会将src字符串拼接在dest字符串末尾，并且返回指向拼接之后结果的指针。
+* 
+* strncat
+* strcat函数的变种，函数额外多接收一个参数控制拷贝src字符串的最大长度。
+*	char *strncat(char *dest, const char *src, size_t n)
+* 
+* strcpy
+* 字符串拷贝函数，可以将src字符串中的内容复制到dest。
+*	char *strcpy(char *dest, const char *src)
+* 有两点需要注意:
+* 1.如果dest字符串长度不够长，在编译时不会报错，但运行时可能导致问题。
+* 2.如果dest中原本就有内容，会被覆盖。
+* 
+* strncpy
+* strcpy加入长度限制的版本，可额外多传入一个参数n表示最多赋值n个字符。当src长度小于n时，剩余部分将会使用空字节填充。
+* 
+* memset
+* 字符串的批量设置函数，可以将字符串批量设置成某一个字符。
+*	void *memset(void *str, int c, size_t n)
+* int c表示要被设置的字符，size_t n表示设置的字符数量。
+* memset除了可以用来给字符串进行批量设置之外也可以给int型的数组进行批量设置。由于一个32位的int占据4个字节，也就是4个字符长度。所以使用memset进行批量设置的时候，最终得到的结果将是4个传入的int c拼接的结果。
+*	int a[100];
+*	memset(a, 1, sizeof a); // memset(a, 1, 400); 因为一个int占据4个字节
+* 我们这样设置之后，a数组当中的元素并不是1，而是0x01010101,转成10进制是16843009。所以使用memset对int型数组进行初始化一般只用3种操作：
+*	// 1. 批量设置成0
+*	memset(a, 0, sizeof a);
+*	// 2. 批量设置成-1
+*	memset(a, -1, sizeof a);
+*	// 3. 批量设置成一个接近最大整数上限的值
+*	memset(a, 0x7f, sizeof a);
+*	memset(a, 0x3f, sizeof a);
+* 
+* memcpy
+* 和strcpy类似，从str2中复制N个字符到str1中。
+*	void *memcpy(void *str1, const void *str2, size_t n)
+* 
+* strcmp
+* 将两个字符串按照字典顺序进行比较，对于字典序的顺序定义为：两个字符串自左向右逐个字符相比（按 ASCII 值大小相比较），直到出现不同的字符或遇 \0 为止。
+*	int strcmp(const char *str1, const char *str2)
+* 返回的结果为一个int，如果它小于0，说明str1小于str2，如果它等于0，说明两者相等，如果大于0，说明str1大于str2。
+* 
+* strncmp
+* strcmp长度限制版，可以额外接受一个数字n，表示最多比较长度为n的字符。
+* 
+* strstr
+*	char *strstr(const char *haystack, const char *needle)
+* 在haystack中搜索needle第一次出现的位置，返回指向该位置的指针。
+* 
+* strtok
+* 
+* memmove
 */
