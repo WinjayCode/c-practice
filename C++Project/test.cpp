@@ -11,6 +11,9 @@
 // 数学计算相关库，例如计算平方根的函数sqrt
 #include <cmath>
 
+// string类
+#include<string>
+
 
 // 命名空间是C++当中的特性，用来解决大型项目名称冲突的问题。
 /*
@@ -314,6 +317,41 @@ void cstring_h_p() {
 	cout << "strstr('abcd-efgh', '-') = " << result3 << endl; // -efgh
 }
 
+
+
+void string_p();
+// 字符串
+void string_p() {
+	string str1 = { "hello world" };
+	string str2 = "hello";
+	string str3 { " world" };
+
+	cout << "hello world[6]=" << str1[6] << endl;
+
+	cout << "hello + world=" << str2 + str3 << endl;
+
+	str2 += str3;
+	cout << "hello += world=" << str2 << endl;
+
+	cout << "hello world.size=" << str1.size() << endl;
+
+	char a[100];
+	cin.getline(a, 100);
+	cout << "cin.getline=" << a << endl;
+
+	string str4;
+	getline(cin, str4);
+	cout << "getline=" << str4 << endl;
+
+	cout << "\"hello world\"" << endl;
+	cout << R"(hello world)" << endl;
+	cout << R"(hello 
+	world)" << endl; // 换行
+	cout << R"haha("(hello world)")haha" << endl;
+}
+
+
+
 // main函数是C++程序的入口函数，C++标准当中定义的main函数类型是int。返回0表示程序正常退出，所以一般我们要在main函数的最后写上return 0。
 /*
 * C++的main函数通常有两种写法，一种是参数留空，一种是定义参数数量以及参数值。
@@ -333,6 +371,7 @@ int main() {
 	cout << ++index << ".calculate" << endl;
 	cout << ++index << ".str" << endl;
 	cout << ++index << ".cstring.h" << endl;
+	cout << ++index << ".string" << endl;
 	cout << endl;
 
 	cout << "num=" << endl << endl;
@@ -383,6 +422,10 @@ int main() {
 
 	if (num == 11) {
 		cstring_h_p();
+	}
+
+	if (num == 12) {
+		string_p();
 	}
 
 	return 0;
@@ -921,4 +964,56 @@ int main() {
 * strtok
 * 
 * memmove
+*/
+
+
+// string类
+/*
+* 和char *的异同
+* 在C++当中，除了char *类型，还有专门的字符串类型，就叫做string。通过包含头文件string就可以使用：
+*	include<string>
+* 在很多方面，string类型的使用方法和char *一样，例如：
+*	string str1;
+*	string str2 = "hello world"; // 初始化和char *一致
+*	cout << str2 << endl; // cout和char *一致
+*	cout << str[2] << endl; // 元素访问和char *一致
+* 除此之外，它还有一个更大的好处，就是当我们从外界读入字符串的时候，再也不用操心读入的字符串超界的问题了。因为string类设计可以让程序自动处理字符串的大小。
+* 
+* C++11初始化
+* 我们也可以使用C++11的列表初始化特性在string上，不过其实没必要，直接使用等于号赋值更方便一些：
+*	string str1 = {"hello world"};
+*	string str2 {"test"};
+* 
+* 拼接
+* 在使用char *的时候，如果我们要拼接两个字符串，需要调用函数strcat来实现。而有了string，我们可以直接使用加号来拼接两个字符串：
+*	string str1 = "hello";
+*	string str2 = "world";
+*	string str3 = str1 + str2;
+* 不仅如此，还可以使用+=，表示把另外一个字符串添加在自己末尾：
+*	str1 += str2; // 等价于str1 = str1 + str2
+* 
+* 长度
+* 对于char *的字符串，我们要求长度，需要使用strlen函数。而string类型的字符串，我们可以直接调用.size()函数：
+*	string str = "hello";
+*	cout << str.size() << endl; // output 5
+* 
+* IO
+* string类的cin和cout用法都和char *完全一致，不过在读取一行的时候有些区别。
+*	char st[100];
+*	cin.getline(st, 100);
+* 
+*	string str;
+*	getline(cin, str);
+* 对于char *来说，我们调用的cin.getline表示的是cin中的一个方法。而后者，我们调用的getline传入了cin，这里的cin是一个传入的参数，并且也没有指定长度，因为string会自动设定长度。
+* 
+* 原始字符串
+* 关于string类型，C++11有一个原始字符串的新特性。
+* 在字符串表示当中，当我们要添加一些特殊字符的时候，往往需要在前面加上反斜杠，表示取义。当这类字符多了之后，就会很麻烦：
+*	cout << "i want to output \"hello world\"" << endl;
+* 如果我们要换行，还要在其中加入\n。针对这个问题C++11提出了原始字符串，也就是说在原始字符串当中所有的符号都会被原本原样地输出，不需要再使用\来取义了。
+* 原始字符串以"R(开头)"结尾，`比如刚才的内容就可以写成：
+*	cout << R"(i want to output "hello world")" << endl;
+* 但是有一个小问题，假如我们想要输出的结果当中也包含"(该怎么办呢？也有办法，编译器允许我们在"和(之间加入任意的字符来做区分（空格、左括号、右括号、斜杠、控制字符除外），这样我们在结尾的时候，也需要加上同样的字符。例如：
+*	cout << R"tst("(test)")tst" << endl;
+* 运行之后，屏幕上会输出"(test)"的结果。
 */
