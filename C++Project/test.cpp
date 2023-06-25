@@ -409,7 +409,7 @@ void pointer_p() {
 * int main() {}
 * int main(int argc, char* argv[]) {}
 */
-int main() {
+int main0() {
 	int index = 0;
 	cout << ++index << ".cout" << endl;
 	cout << ++index << ".cin" << endl;

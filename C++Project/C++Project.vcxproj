@@ -116,6 +116,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>Default</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -139,7 +140,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="test1.cpp" />
     <ClCompile Include="test.cpp" />
+    <ClCompile Include="test10.cpp" />
+    <ClCompile Include="test11.cpp" />
+    <ClCompile Include="test12.cpp" />
+    <ClCompile Include="test13.cpp" />
+    <ClCompile Include="test2.cpp" />
+    <ClCompile Include="test3.cpp" />
+    <ClCompile Include="test4.cpp" />
+    <ClCompile Include="test5.cpp" />
+    <ClCompile Include="test6.cpp" />
+    <ClCompile Include="test7.cpp" />
+    <ClCompile Include="test8.cpp" />
+    <ClCompile Include="test9.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

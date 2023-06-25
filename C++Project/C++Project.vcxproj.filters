@@ -18,5 +18,44 @@
     <ClCompile Include="test.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="test1.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test3.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test4.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test5.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test6.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test7.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test8.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test9.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test10.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test13.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test12.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test11.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
