@@ -60,5 +60,16 @@
     <ClCompile Include="bubbleSort.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="methodTemplateTest.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="classTemplateTest.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MyArray.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

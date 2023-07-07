@@ -34,7 +34,7 @@ static void method2()
 }
 
 // 交换两个数
-int main1()
+int main()
 {
     method1();
 

@@ -141,6 +141,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="bubbleSort.cpp" />
+    <ClCompile Include="classTemplateTest.cpp" />
+    <ClCompile Include="methodTemplateTest.cpp" />
     <ClCompile Include="test1.cpp" />
     <ClCompile Include="test.cpp" />
     <ClCompile Include="test10.cpp" />
@@ -155,6 +157,9 @@
     <ClCompile Include="test7.cpp" />
     <ClCompile Include="test8.cpp" />
     <ClCompile Include="test9.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MyArray.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
