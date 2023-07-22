@@ -12,7 +12,7 @@ static void method1()
 {
     int rows;
 
-    cout << "ÊäÈëÐÐÊý: ";
+    cout << "è¾“å…¥è¡Œæ•°: ";
     cin >> rows;
 
     for (int i = 1; i <= rows; ++i)
@@ -36,7 +36,7 @@ static void method2()
 {
     int rows;
 
-    cout << "ÊäÈëÐÐÊý: ";
+    cout << "è¾“å…¥è¡Œæ•°: ";
     cin >> rows;
 
     for (int i = 1; i <= rows; ++i)
@@ -60,7 +60,7 @@ static void method3()
 {
     char input, alphabet = 'A';
 
-    cout << "ÊäÈë×îºóÒ»¸ö´óÐ´×ÖÄ¸: ";
+    cout << "è¾“å…¥æœ€åŽä¸€ä¸ªå¤§å†™å­—æ¯: ";
     cin >> input;
 
     for (int i = 1; i <= (input - 'A' + 1); ++i)
@@ -86,7 +86,7 @@ static void method4()
 {
     int rows;
 
-    cout << "ÊäÈëÐÐÊý: ";
+    cout << "è¾“å…¥è¡Œæ•°: ";
     cin >> rows;
 
     for (int i = rows; i >= 1; --i)
@@ -110,7 +110,7 @@ static void method5()
 {
     int rows;
 
-    cout << "ÊäÈëÐÐÊý: ";
+    cout << "è¾“å…¥è¡Œæ•°: ";
     cin >> rows;
 
     for (int i = rows; i >= 1; --i)
@@ -134,7 +134,7 @@ static void method6()
 {
     int space, rows;
 
-    cout << "ÊäÈëÐÐÊý: ";
+    cout << "è¾“å…¥è¡Œæ•°: ";
     cin >> rows;
 
     for (int i = 1, k = 0; i <= rows; ++i, k = 0)
@@ -164,7 +164,7 @@ static void method7()
 {
     int rows, count = 0, count1 = 0, k = 0;
 
-    cout << "ÊäÈëÐÐÊý: ";
+    cout << "è¾“å…¥è¡Œæ•°: ";
     cin >> rows;
 
     for (int i = 1; i <= rows; ++i)
@@ -206,7 +206,7 @@ static void method8()
 {
     int rows;
 
-    cout << "ÊäÈëÐÐÊý: ";
+    cout << "è¾“å…¥è¡Œæ•°: ";
     cin >> rows;
 
     for (int i = rows; i >= 1; --i)
@@ -267,7 +267,7 @@ static void method10()
 {
     int rows, number = 1;
 
-    cout << "ÊäÈëÐÐÊý: ";
+    cout << "è¾“å…¥è¡Œæ•°: ";
     cin >> rows;
 
     for (int i = 1; i <= rows; i++)
@@ -282,7 +282,7 @@ static void method10()
     }
 }
 
-// ´´½¨¸÷ÀàÈý½ÇÐÎÍ¼°¸
+// åˆ›å»ºå„ç±»ä¸‰è§’å½¢å›¾æ¡ˆ
 int main9()
 {
     method1();

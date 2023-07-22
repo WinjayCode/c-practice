@@ -19,27 +19,27 @@ static void test01()
 	{
 		arr1.Push_Back(i);
 	}
-	cout << "arr1µÄ´òÓ¡Êä³öÎª£º" << endl;
+	cout << "arr1çš„æ‰“å°è¾“å‡ºä¸ºï¼š" << endl;
 	printIntArray(arr1);
 
-	cout << "arr1µÄÈİÁ¿Îª£º" << arr1.getCapacity() << endl;
-	cout << "arr1µÄ´óĞ¡Îª£º" << arr1.getSize() << endl;
+	cout << "arr1çš„å®¹é‡ä¸ºï¼š" << arr1.getCapacity() << endl;
+	cout << "arr1çš„å¤§å°ä¸ºï¼š" << arr1.getSize() << endl;
 
 
 	MyArray<int> arr2(arr1);
-	cout << "arr2µÄ´òÓ¡Êä³öÎª£º" << endl;
+	cout << "arr2çš„æ‰“å°è¾“å‡ºä¸ºï¼š" << endl;
 	printIntArray(arr2);
 
 	arr2.Pop_Back();
-	cout << "arr2Î²É¾ºó£º" << endl;
-	cout << "arr2µÄÈİÁ¿Îª£º" << arr2.getCapacity() << endl;
-	cout << "arr2µÄ´óĞ¡Îª£º" << arr2.getSize() << endl;
+	cout << "arr2å°¾åˆ åï¼š" << endl;
+	cout << "arr2çš„å®¹é‡ä¸ºï¼š" << arr2.getCapacity() << endl;
+	cout << "arr2çš„å¤§å°ä¸ºï¼š" << arr2.getSize() << endl;
 
 	//MyArray<int> arr3(100);
 	//arr3 = arr1;
 }
 
-// ²âÊÔ×Ô¶¨ÒåÊı¾İÀàĞÍ
+// æµ‹è¯•è‡ªå®šä¹‰æ•°æ®ç±»å‹
 class Person
 {
 public:
@@ -58,7 +58,7 @@ void printPersonArray(MyArray<Person>& arr)
 {
 	for (int i = 0; i < arr.getSize(); i++)
 	{
-		cout << "ĞÕÃû£º" << arr[i].m_Name << " ÄêÁä£º" << arr[i].m_Age << endl;
+		cout << "å§“åï¼š" << arr[i].m_Name << " å¹´é¾„ï¼š" << arr[i].m_Age << endl;
 	}
 }
 
@@ -66,11 +66,11 @@ static void test02()
 {
 	MyArray<Person> arr(10);
 
-	Person p1("ËïÎò¿Õ", 1000);
-	Person p2("Öí°Ë½ä", 900);
-	Person p3("É³Îò¾»", 700);
-	Person p4("ÌÆÉ®", 20);
-	Person p5("°×ÁúÂí", 600);
+	Person p1("å­™æ‚Ÿç©º", 1000);
+	Person p2("çŒªå…«æˆ’", 900);
+	Person p3("æ²™æ‚Ÿå‡€", 700);
+	Person p4("å”åƒ§", 20);
+	Person p5("ç™½é¾™é©¬", 600);
 
 	arr.Push_Back(p1);
 	arr.Push_Back(p2);
@@ -80,8 +80,8 @@ static void test02()
 
 	printPersonArray(arr);
 
-	cout << "arrµÄÈİÁ¿Îª£º" << arr.getCapacity() << endl;
-	cout << "arrµÄ´óĞ¡Îª£º" << arr.getSize() << endl;
+	cout << "arrçš„å®¹é‡ä¸ºï¼š" << arr.getCapacity() << endl;
+	cout << "arrçš„å¤§å°ä¸ºï¼š" << arr.getSize() << endl;
 }
 
 int main_class_template()

@@ -1,29 +1,29 @@
 #include <iostream>
 using namespace std;
 
-// ÅĞ¶ÏÈòÄê
+// åˆ¤æ–­é—°å¹´
 int main7()
 {
     int year;
 
-    cout << "ÊäÈëÄê·İ: ";
+    cout << "è¾“å…¥å¹´ä»½: ";
     cin >> year;
 
     if (year % 4 == 0)
     {
         if (year % 100 == 0)
         {
-            // // ÕâÀïÈç¹û±» 400 Õû³ıÊÇÈòÄê
+            // // è¿™é‡Œå¦‚æœè¢« 400 æ•´é™¤æ˜¯é—°å¹´
             if (year % 400 == 0)
-                cout << year << " ÊÇÈòÄê";
+                cout << year << " æ˜¯é—°å¹´";
             else
-                cout << year << " ²»ÊÇÈòÄê";
+                cout << year << " ä¸æ˜¯é—°å¹´";
         }
         else
-            cout << year << " ÊÇÈòÄê";
+            cout << year << " æ˜¯é—°å¹´";
     }
     else
-        cout << year << " ²»ÊÇÈòÄê";
+        cout << year << " ä¸æ˜¯é—°å¹´";
 
     return 0;
 }

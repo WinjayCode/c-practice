@@ -5,10 +5,10 @@ static void method1()
 {
     int n1, n2, max;
 
-    cout << "ÊäÈëÁ½¸öÊı: ";
+    cout << "è¾“å…¥ä¸¤ä¸ªæ•°: ";
     cin >> n1 >> n2;
 
-    // »ñÈ¡×î´óµÄÊı
+    // è·å–æœ€å¤§çš„æ•°
     max = (n1 > n2) ? n1 : n2;
 
     do
@@ -23,18 +23,18 @@ static void method1()
     } while (true);
 }
 
-// ×îĞ¡¹«±¶Êı=(n1 * n2) / ×î´ó¹«Ô¼Êı
+// æœ€å°å…¬å€æ•°=(n1 * n2) / æœ€å¤§å…¬çº¦æ•°
 static void method2()
 {
     int n1, n2, hcf, temp, lcm;
 
-    cout << "ÊäÈëÁ½¸öÊı: ";
+    cout << "è¾“å…¥ä¸¤ä¸ªæ•°: ";
     cin >> n1 >> n2;
 
     hcf = n1;
     temp = n2;
 
-    // Çó³öÁ½Êı×î´ó¹«Ô¼Êı
+    // æ±‚å‡ºä¸¤æ•°æœ€å¤§å…¬çº¦æ•°
     while (hcf != temp)
     {
         if (hcf > temp)
@@ -43,13 +43,13 @@ static void method2()
             temp -= hcf;
     }
 
-    // ¹«Ê½
+    // å…¬å¼
     lcm = (n1 * n2) / hcf;
 
     cout << "LCM = " << lcm;
 }
 
-// ÇóÁ½Êı×îĞ¡¹«±¶Êı
+// æ±‚ä¸¤æ•°æœ€å°å…¬å€æ•°
 int main11()
 {
     method1();

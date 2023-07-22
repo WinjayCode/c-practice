@@ -6,10 +6,10 @@ static void method1()
     char op;
     float num1, num2;
 
-    cout << "ÊäÈëÔËËã·û£º+¡¢-¡¢*¡¢/ : ";
+    cout << "è¾“å…¥è¿ç®—ç¬¦ï¼š+ã€-ã€*ã€/ : ";
     cin >> op;
 
-    cout << "ÊäÈëÁ½¸öÊý: ";
+    cout << "è¾“å…¥ä¸¤ä¸ªæ•°: ";
     cin >> num1 >> num2;
 
     switch (op)
@@ -29,7 +29,7 @@ static void method1()
     case '/':
         if (num2 == 0)
         {
-            cout << "error²»ÄÜ³ýÒÔÁã";
+            cout << "errorä¸èƒ½é™¤ä»¥é›¶";
             break;
         }
         else
@@ -39,8 +39,8 @@ static void method1()
         }
 
     default:
-        // Èç¹ûÔËËã·û²»ÊÇ +, -, * »ò /, ÌáÊ¾´íÎóÐÅÏ¢
-        cout << "Error!  ÇëÊäÈëÕýÈ·ÔËËã·û¡£";
+        // å¦‚æžœè¿ç®—ç¬¦ä¸æ˜¯ +, -, * æˆ– /, æç¤ºé”™è¯¯ä¿¡æ¯
+        cout << "Error!  è¯·è¾“å…¥æ­£ç¡®è¿ç®—ç¬¦ã€‚";
         break;
     }
 }
@@ -64,7 +64,7 @@ double divide(double num1, double num2) {
         return num1 / num2;
     }
     else {
-        cout << "´íÎó£º³ýÊý²»ÄÜÎªÁã£¡" << endl;
+        cout << "é”™è¯¯ï¼šé™¤æ•°ä¸èƒ½ä¸ºé›¶ï¼" << endl;
         return 0;
     }
 }
@@ -74,13 +74,13 @@ static void method2()
     double num1, num2;
     char op;
 
-    cout << "ÇëÊäÈëµÚÒ»¸öÊý×Ö£º";
+    cout << "è¯·è¾“å…¥ç¬¬ä¸€ä¸ªæ•°å­—ï¼š";
     cin >> num1;
 
-    cout << "ÇëÊäÈëÔËËã·û£¨+¡¢-¡¢*¡¢/£©£º";
+    cout << "è¯·è¾“å…¥è¿ç®—ç¬¦ï¼ˆ+ã€-ã€*ã€/ï¼‰ï¼š";
     cin >> op;
 
-    cout << "ÇëÊäÈëµÚ¶þ¸öÊý×Ö£º";
+    cout << "è¯·è¾“å…¥ç¬¬äºŒä¸ªæ•°å­—ï¼š";
     cin >> num2;
 
     double result;
@@ -99,14 +99,14 @@ static void method2()
         result = divide(num1, num2);
         break;
     default:
-        cout << "´íÎó£ºÎÞÐ§µÄÔËËã·û£¡" << endl;
+        cout << "é”™è¯¯ï¼šæ— æ•ˆçš„è¿ç®—ç¬¦ï¼" << endl;
         break;
     }
 
-    cout << "½á¹û£º" << result << endl;
+    cout << "ç»“æžœï¼š" << result << endl;
 }
 
-// ÊµÏÖÒ»¸ö¼òµ¥µÄ¼ÆËãÆ÷
+// å®žçŽ°ä¸€ä¸ªç®€å•çš„è®¡ç®—å™¨
 int main12()
 {
     method1();

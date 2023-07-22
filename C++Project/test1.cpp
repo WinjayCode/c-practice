@@ -1,39 +1,39 @@
 #include <iostream>
 using namespace std;
 
-// Ê¹ÓÃÁÙÊ±±äÁ¿
+// ä½¿ç”¨ä¸´æ—¶å˜é‡
 static void method1()
 {
     int a = 5, b = 10, temp;
 
-    cout << "½»»»Ö®Ç°£º" << endl;
+    cout << "äº¤æ¢ä¹‹å‰ï¼š" << endl;
     cout << "a = " << a << ", b = " << b << endl;
 
     temp = a;
     a = b;
     b = temp;
 
-    cout << "\n½»»»Ö®ºó£º" << endl;
+    cout << "\näº¤æ¢ä¹‹åï¼š" << endl;
     cout << "a = " << a << ", b = " << b << endl;
 }
 
-// ²»Ê¹ÓÃÁÙÊ±±äÁ¿
+// ä¸ä½¿ç”¨ä¸´æ—¶å˜é‡
 static void method2()
 {
     int a = 5, b = 10;
 
-    cout << "½»»»Ö®Ç°£º" << endl;
+    cout << "äº¤æ¢ä¹‹å‰ï¼š" << endl;
     cout << "a = " << a << ", b = " << b << endl;
 
     a = a + b;
     b = a - b;
     a = a - b;
 
-    cout << "\n½»»»Ö®ºó£º" << endl;
+    cout << "\näº¤æ¢ä¹‹åï¼š" << endl;
     cout << "a = " << a << ", b = " << b << endl;
 }
 
-// ½»»»Á½¸öÊı
+// äº¤æ¢ä¸¤ä¸ªæ•°
 int main()
 {
     method1();

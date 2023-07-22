@@ -5,7 +5,7 @@ static void method1()
 {
     int n1, n2;
 
-    cout << "输入两个整数: ";
+    cout << "杈撳叆涓や釜鏁存暟: ";
     cin >> n1 >> n2;
 
     while (n1 != n2)
@@ -22,10 +22,10 @@ static void method1()
 static void method2()
 {
     int n1, n2, hcf;
-    cout << "输入两个整数: ";
+    cout << "杈撳叆涓や釜鏁存暟: ";
     cin >> n1 >> n2;
 
-    // 如果 n2 大于 n1 交换两个变量
+    // 濡傛灉 n2 澶т簬 n1 浜ゆ崲涓や釜鍙橀噺
     if (n2 > n1) {
         int temp = n2;
         n2 = n1;
@@ -41,7 +41,7 @@ static void method2()
     cout << "HCF = " << hcf;
 }
 
-// 求两数的最大公约数
+// 姹備袱鏁扮殑鏈�澶у叕绾︽暟
 int main10()
 {
     method1();

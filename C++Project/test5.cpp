@@ -2,11 +2,11 @@
 #include <cmath>
 using namespace std;
 
-// ÇóÒ»Ôª¶þ´Î·½³ÌµÄ¸ù
+// æ±‚ä¸€å…ƒäºŒæ¬¡æ–¹ç¨‹çš„æ ¹
 int main5() {
 
     float a, b, c, x1, x2, discriminant, realPart, imaginaryPart;
-    cout << "ÊäÈë a, b ºÍ c: ";
+    cout << "è¾“å…¥ a, b å’Œ c: ";
     cin >> a >> b >> c;
     discriminant = b * b - 4 * a * c;
 
@@ -19,7 +19,7 @@ int main5() {
     }
 
     else if (discriminant == 0) {
-        cout << "Êµ¸ùÏàÍ¬£º" << endl;
+        cout << "å®žæ ¹ç›¸åŒï¼š" << endl;
         x1 = (-b + sqrt(discriminant)) / (2 * a);
         cout << "x1 = x2 =" << x1 << endl;
     }
@@ -27,7 +27,7 @@ int main5() {
     else {
         realPart = -b / (2 * a);
         imaginaryPart = sqrt(-discriminant) / (2 * a);
-        cout << "Êµ¸ù²»Í¬£º" << endl;
+        cout << "å®žæ ¹ä¸åŒï¼š" << endl;
         cout << "x1 = " << realPart << "+" << imaginaryPart << "i" << endl;
         cout << "x2 = " << realPart << "-" << imaginaryPart << "i" << endl;
     }
