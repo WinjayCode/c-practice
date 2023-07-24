@@ -66,6 +66,9 @@
     <ClCompile Include="classTemplateTest.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="AddressBookManagementSystem\AddressBookManagerSystem.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyArray.hpp">

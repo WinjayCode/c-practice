@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 #include <string>
-#include <unistd.h>
+//#include <unistd.h>
 #define MAX 1000
 
 struct Person
@@ -22,13 +22,13 @@ struct AddressBooks
 void pauseAndClear()
 {
     // mac 下实现暂停输出和清屏功能
-    cin.ignore();
-    cin.get();
-    system("clear");
+    //cin.ignore();
+    //cin.get();
+    //system("clear");
 
     // windows 下的实现
-    // system("pause");
-    // system("cls");
+     system("pause");
+     system("cls");
 }
 
 void addPerson(AddressBooks *abs)
@@ -52,7 +52,7 @@ void addPerson(AddressBooks *abs)
         while (true)
         {
             cin >> sex;
-            if (sex == 1 | sex == 2)
+            if (sex == 1 || sex == 2)
             {
                 abs->personArray[abs->m_Size].m_Sex = sex;
                 break;
@@ -188,7 +188,7 @@ void modifyPerson(AddressBooks *abs)
         while (true)
         {
             cin >> sex;
-            if (sex == 1 | sex == 2)
+            if (sex == 1 || sex == 2)
             {
                 abs->personArray[result].m_Sex = sex;
                 break;
