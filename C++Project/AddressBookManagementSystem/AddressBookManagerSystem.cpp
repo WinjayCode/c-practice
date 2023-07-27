@@ -237,8 +237,11 @@ void showMenu()
     cout << "***************************" << endl;
 }
 
-int main()
+int main_address_book_manager_system()
 {
+    // only for windows system
+    system("chcp 65001");
+
     AddressBooks abs;
     abs.m_Size = 0;
 

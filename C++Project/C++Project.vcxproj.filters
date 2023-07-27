@@ -69,9 +69,39 @@
     <ClCompile Include="AddressBookManagementSystem\AddressBookManagerSystem.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="WorkerManagerSystem\WorkerManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WorkerManagerSystem\WorkerManagerSystem.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WorkerManagerSystem\Employee.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WorkerManagerSystem\Manager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WorkerManagerSystem\Boss.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyArray.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WorkerManagerSystem\WorkerManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WorkerManagerSystem\Worker.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WorkerManagerSystem\Employee.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WorkerManagerSystem\Manager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WorkerManagerSystem\Boss.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

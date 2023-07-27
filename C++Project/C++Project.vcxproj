@@ -161,9 +161,19 @@
     <ClCompile Include="test7.cpp" />
     <ClCompile Include="test8.cpp" />
     <ClCompile Include="test9.cpp" />
+    <ClCompile Include="WorkerManagerSystem\Boss.cpp" />
+    <ClCompile Include="WorkerManagerSystem\Employee.cpp" />
+    <ClCompile Include="WorkerManagerSystem\Manager.cpp" />
+    <ClCompile Include="WorkerManagerSystem\WorkerManager.cpp" />
+    <ClCompile Include="WorkerManagerSystem\WorkerManagerSystem.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyArray.hpp" />
+    <ClInclude Include="WorkerManagerSystem\Boss.h" />
+    <ClInclude Include="WorkerManagerSystem\Employee.h" />
+    <ClInclude Include="WorkerManagerSystem\Manager.h" />
+    <ClInclude Include="WorkerManagerSystem\Worker.h" />
+    <ClInclude Include="WorkerManagerSystem\WorkerManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
