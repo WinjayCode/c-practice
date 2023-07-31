@@ -147,6 +147,9 @@
     <ClCompile Include="bubbleSort.cpp" />
     <ClCompile Include="classTemplateTest.cpp" />
     <ClCompile Include="methodTemplateTest.cpp" />
+    <ClCompile Include="SpeechManagerSystem\Speaker.cpp" />
+    <ClCompile Include="SpeechManagerSystem\SpeechManager.cpp" />
+    <ClCompile Include="SpeechManagerSystem\SpeechManagerSystem.cpp" />
     <ClCompile Include="test1.cpp" />
     <ClCompile Include="test.cpp" />
     <ClCompile Include="test10.cpp" />
@@ -169,6 +172,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyArray.hpp" />
+    <ClInclude Include="SpeechManagerSystem\Speaker.h" />
+    <ClInclude Include="SpeechManagerSystem\SpeechManager.h" />
     <ClInclude Include="WorkerManagerSystem\Boss.h" />
     <ClInclude Include="WorkerManagerSystem\Employee.h" />
     <ClInclude Include="WorkerManagerSystem\Manager.h" />

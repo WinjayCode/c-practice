@@ -20,7 +20,7 @@ void test()
 	delete worker;
 }
 
-int main()
+int main_work_manager_system()
 {
 	// only for windows system
 	system("chcp 65001");

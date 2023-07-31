@@ -84,6 +84,15 @@
     <ClCompile Include="WorkerManagerSystem\Boss.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="SpeechManagerSystem\SpeechManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SpeechManagerSystem\SpeechManagerSystem.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SpeechManagerSystem\Speaker.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyArray.hpp">
@@ -102,6 +111,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="WorkerManagerSystem\Boss.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SpeechManagerSystem\SpeechManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SpeechManagerSystem\Speaker.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
