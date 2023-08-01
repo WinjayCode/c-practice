@@ -90,6 +90,18 @@
     <ClCompile Include="SpeechManagerSystem\SpeechManagerSystem.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="ComputerRoomReservationSystem\ComputerRoomReservationSystem.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ComputerRoomReservationSystem\Student.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ComputerRoomReservationSystem\Teacher.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ComputerRoomReservationSystem\Manager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyArray.hpp">
@@ -114,6 +126,21 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="SpeechManagerSystem\Speaker.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ComputerRoomReservationSystem\Identity.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ComputerRoomReservationSystem\Student.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ComputerRoomReservationSystem\Teacher.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ComputerRoomReservationSystem\Manager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ComputerRoomReservationSystem\GlobalFile.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

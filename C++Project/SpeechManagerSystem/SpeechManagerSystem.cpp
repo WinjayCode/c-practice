@@ -16,7 +16,7 @@ void SpeechManagerTest()
 	}
 }
 
-int main()
+int main_speech_manager_system()
 {
 	// only for windows system
 	system("chcp 65001");
