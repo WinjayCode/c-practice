@@ -4,6 +4,7 @@ SpeechManager::SpeechManager()
 {
 	initSpeech();
 	createSpeaker();
+	loadRecord();
 }
 
 void SpeechManager::initSpeech()
@@ -13,6 +14,7 @@ void SpeechManager::initSpeech()
 	vVictory.clear();
 	m_Speaker.clear();
 	m_Index = 1;
+	m_Record.clear();
 }
 
 void SpeechManager::createSpeaker()
@@ -57,6 +59,11 @@ void SpeechManager::startSpeech()
 	showScore();
 	// 4、保存分数
 	saveRecord();
+
+	// 重置比赛，获取记录
+	initSpeech();
+	createSpeaker();
+	loadRecord();
 
 	cout << "本届比赛结束！" << endl;
 	pauseAndClear();
@@ -206,7 +213,107 @@ void SpeechManager::saveRecord()
 
 	ofs.close();
 
-	cout << "记录已经保存" << endl;
+	cout << "记录已经保存！" << endl;
+
+	fileIsEmpty = false;
+}
+
+void SpeechManager::loadRecord()
+{
+	ifstream ifs(FILENAME, ios::in);
+	if (!ifs.is_open())
+	{
+		fileIsEmpty = true;
+		//cout << "文件不存在！" << endl;
+		ifs.close();
+		return;
+	}
+
+	char ch;
+	ifs >> ch;
+	if (ifs.eof())
+	{
+		//cout << "文件为空！" << endl;
+		fileIsEmpty = true;
+		ifs.close();
+		return;
+	}
+
+	fileIsEmpty = false;
+
+	ifs.putback(ch); // 将上面读取的单个字符放回去
+
+	string data;
+	int index = 0; // 第几届
+	while (ifs >> data)
+	{
+		//cout << data << endl;
+		vector<string>v; // 存放6个string字符串
+
+		int pos = -1; // 查找“,”位置的变量 
+		int start = 0;
+
+		while (true)
+		{
+			pos = data.find(",", start); // 从0开始查找
+			if (pos == -1)
+			{
+				break;
+			}
+			string tmp = data.substr(start, pos - start); // 找到了，进行分割 参数1 起始位置，参数2 截取长度
+			v.push_back(tmp);
+			start = pos + 1;
+		}
+
+		m_Record.insert(make_pair(index, v));
+		index++;
+	}
+
+	ifs.close();
+}
+
+void SpeechManager::showRecord()
+{
+	if (fileIsEmpty)
+	{
+		cout << "文件不存在，或记录为空！" << endl;
+	}
+	else
+	{
+		for (int i = 0; i < m_Record.size(); i++)
+		{
+			cout << "第" << i + 1 << "届" << endl;
+			cout << "冠军编号：" << m_Record[i][0] << " 得分：" << m_Record[i][1] << " "
+				"亚军编号：" << m_Record[i][2] << " 得分：" << m_Record[i][3] << " "
+				"季军编号：" << m_Record[i][4] << " 得分：" << m_Record[i][5] << endl;
+		}
+	}
+	
+	pauseAndClear();
+}
+
+void SpeechManager::clearRecord()
+{
+	cout << "确认清空？" << endl;
+	cout << "1.确认" << endl;
+	cout << "2.返回" << endl;
+
+	int select = 0;
+	cin >> select;
+	if (select == 1)
+	{
+		// 打开模式 ios::trunc 如果存在删除文件并重新创建
+		ofstream ofs(FILENAME, ios::trunc);
+		ofs.close();
+
+		initSpeech();
+		createSpeaker();
+		loadRecord();
+
+		cout << "清空成功！" << endl;
+	}
+
+	pauseAndClear();
 }
 
 void SpeechManager::show_Menu()

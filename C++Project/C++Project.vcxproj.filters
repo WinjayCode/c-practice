@@ -90,9 +90,6 @@
     <ClCompile Include="SpeechManagerSystem\SpeechManagerSystem.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="SpeechManagerSystem\Speaker.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyArray.hpp">

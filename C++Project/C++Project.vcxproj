@@ -147,7 +147,6 @@
     <ClCompile Include="bubbleSort.cpp" />
     <ClCompile Include="classTemplateTest.cpp" />
     <ClCompile Include="methodTemplateTest.cpp" />
-    <ClCompile Include="SpeechManagerSystem\Speaker.cpp" />
     <ClCompile Include="SpeechManagerSystem\SpeechManager.cpp" />
     <ClCompile Include="SpeechManagerSystem\SpeechManagerSystem.cpp" />
     <ClCompile Include="test1.cpp" />

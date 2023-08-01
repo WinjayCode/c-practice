@@ -2,6 +2,7 @@
 using namespace std;
 #include<string>
 #include"SpeechManager.h"
+#include<ctime>
 
 void SpeechManagerTest()
 {
@@ -22,6 +23,8 @@ int main()
 
 	//SpeechManagerTest();
 
+	srand((unsigned int) time(NULL));
+
 	SpeechManager sm;
 
 	int choice = 0;
@@ -39,8 +42,10 @@ int main()
 			sm.startSpeech();
 			break;
 		case 2:
+			sm.showRecord();
 			break;
 		case 3:
+			sm.clearRecord();
 			break;
 		case 0:
 			sm.exitSystem();

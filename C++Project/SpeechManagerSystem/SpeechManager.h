@@ -38,6 +38,15 @@ public:
 	// 保存记录
 	void saveRecord();
 
+	// 读取记录
+	void loadRecord();
+
+	// 显示往届得分
+	void showRecord();
+
+	// 清空记录
+	void clearRecord();
+
 	void show_Menu();
 
 	void exitSystem();
@@ -55,7 +64,15 @@ public:
 	// 胜出前三名选手编号容器
 	vector<int>vVictory;
 
+	// 编号以及对应具体选手容器
 	map<int, Speaker>m_Speaker;
 
+	// 比赛轮数
 	int m_Index;
+
+	// 文件为空的标志
+	bool fileIsEmpty;
+
+	// 往届记录
+	map<int, vector<string>>m_Record;
 };
