@@ -11,7 +11,7 @@ public:
 	virtual void operMenu() = 0;
 
 	// 用户名
-	string m_Name; 
+	string m_Name;
 	// 密码
-	string m_Pwd; 
+	string m_Pwd;
 };

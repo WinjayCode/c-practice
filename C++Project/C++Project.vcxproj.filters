@@ -99,7 +99,13 @@
     <ClCompile Include="ComputerRoomReservationSystem\Teacher.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="ComputerRoomReservationSystem\Manager.cpp">
+    <ClCompile Include="ComputerRoomReservationSystem\Administrator.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ComputerRoomReservationSystem\Util.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ComputerRoomReservationSystem\OrderFile.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -137,10 +143,19 @@
     <ClInclude Include="ComputerRoomReservationSystem\Teacher.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="ComputerRoomReservationSystem\Manager.h">
+    <ClInclude Include="ComputerRoomReservationSystem\GlobalFile.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="ComputerRoomReservationSystem\GlobalFile.h">
+    <ClInclude Include="ComputerRoomReservationSystem\Administrator.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ComputerRoomReservationSystem\Util.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ComputerRoomReservationSystem\ComputerRoom.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ComputerRoomReservationSystem\OrderFile.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

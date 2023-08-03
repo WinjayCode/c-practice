@@ -146,10 +146,12 @@
     </ClCompile>
     <ClCompile Include="bubbleSort.cpp" />
     <ClCompile Include="classTemplateTest.cpp" />
+    <ClCompile Include="ComputerRoomReservationSystem\Administrator.cpp" />
     <ClCompile Include="ComputerRoomReservationSystem\ComputerRoomReservationSystem.cpp" />
-    <ClCompile Include="ComputerRoomReservationSystem\Manager.cpp" />
+    <ClCompile Include="ComputerRoomReservationSystem\OrderFile.cpp" />
     <ClCompile Include="ComputerRoomReservationSystem\Student.cpp" />
     <ClCompile Include="ComputerRoomReservationSystem\Teacher.cpp" />
+    <ClCompile Include="ComputerRoomReservationSystem\Util.cpp" />
     <ClCompile Include="methodTemplateTest.cpp" />
     <ClCompile Include="SpeechManagerSystem\SpeechManager.cpp" />
     <ClCompile Include="SpeechManagerSystem\SpeechManagerSystem.cpp" />
@@ -174,11 +176,14 @@
     <ClCompile Include="WorkerManagerSystem\WorkerManagerSystem.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ComputerRoomReservationSystem\Administrator.h" />
+    <ClInclude Include="ComputerRoomReservationSystem\ComputerRoom.h" />
     <ClInclude Include="ComputerRoomReservationSystem\GlobalFile.h" />
     <ClInclude Include="ComputerRoomReservationSystem\Identity.h" />
-    <ClInclude Include="ComputerRoomReservationSystem\Manager.h" />
+    <ClInclude Include="ComputerRoomReservationSystem\OrderFile.h" />
     <ClInclude Include="ComputerRoomReservationSystem\Student.h" />
     <ClInclude Include="ComputerRoomReservationSystem\Teacher.h" />
+    <ClInclude Include="ComputerRoomReservationSystem\Util.h" />
     <ClInclude Include="MyArray.hpp" />
     <ClInclude Include="SpeechManagerSystem\Speaker.h" />
     <ClInclude Include="SpeechManagerSystem\SpeechManager.h" />

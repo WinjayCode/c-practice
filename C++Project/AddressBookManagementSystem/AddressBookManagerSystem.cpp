@@ -19,7 +19,7 @@ struct AddressBooks
     int m_Size;
 };
 
-void pauseAndClear()
+static void pauseAndClear()
 {
     // mac 下实现暂停输出和清屏功能
     //cin.ignore();
